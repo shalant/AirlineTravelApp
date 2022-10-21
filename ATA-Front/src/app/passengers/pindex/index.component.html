@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Passengers</h1>
+    <a href="#" routerLink="/Passengers/create/" class="btn btn-success">+ Create A Passenger</a>
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Job</th>
+                <th scope="col">Age</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-active" *ngFor="let passenger of passengers">
+                <td>{{ passenger.firstName }}</td>
+                <td>{{ passenger.lastName }}</td>
+                <td>{{ passenger.email }}</td>
+                <td>{{ passenger.job }}</td>
+                <td>{{ passenger.age }}</td>
+                <td>
+                    <a href="#" [routerLink]="['/passenger/', passenger.id]" class="btn btn-primary">Details</a>
+                    <a href="#" [routerLink]="['/Passengers/edit/', passenger.id]" class="btn btn-info">Edit</a>
+                    <button type="button" (click)="deletePassenger(passenger.id)" class="btn btn-danger">Delete</button>
+
+                    <!-- <a href="#" [routerLink]="['/Passengers/delete', passenger.id]" class="btn btn-danger">Delete</a> -->
+
+                    <!-- <button [routerLink]="['/Passengers/edit/']" class="btn btn-success">
+                        Edit
+                    </button>/                    
+                    <button class="btn btn-danger">
+                        Delete
+                    </button> -->
+                </td>          
+            </tr>
+        </tbody>
+    </table>
+</div>

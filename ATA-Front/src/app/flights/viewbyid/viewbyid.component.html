@@ -1,0 +1,50 @@
+<div class="container">
+    <h1>View Flight</h1>
+  
+    <a href="#" [routerLink]="['/Flights/index']" class="btn btn-primary">&lt;&lt; Back</a>
+   
+    <div>
+        <strong>ID:</strong>
+        <p>{{ flight.id }}</p>
+    </div>
+   
+    <div>
+        <strong>Flight Number:</strong>
+        <p>{{ flight.flightNumber }}</p>
+    </div>
+   
+    <div>
+        <strong>Departure Date:</strong>
+        <p>{{ flight.departureDate }}</p>
+    </div>
+
+    <div>
+        <strong>Arrival Date:</strong>
+        <p>{{ flight.arrivalDate }}</p>
+    </div>
+
+    <div>
+        <strong>Departure Time:</strong>
+        <p>{{ flight.departureTime }}</p>
+    </div>
+
+    <div>
+        <strong>Arrival Time:</strong>
+        <p>{{ flight.arrivalTime }}</p>
+    </div>
+
+    <div>
+        <strong>Departure Airport:</strong>
+        <p>{{ flight.departureAirport }}</p>
+    </div>
+
+    <div>
+        <strong>Arrival Airport:</strong>
+        <p>{{ flight.arrivalAirport }}</p>
+    </div>
+    <div>
+        <strong>Passenger Limit:</strong>
+        <p>{{ flight.passengerLimit }}</p>
+    </div>
+   
+</div>

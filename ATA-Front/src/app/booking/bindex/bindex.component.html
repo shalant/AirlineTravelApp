@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Bookings</h1>
+    <a href="#" routerLink="/Bookings/create/" class="btn btn-success">+ Create A Booking</a>
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Confirmation Number</th>
+                <th>Flight Id</th>
+                <th>Passenger Id</th>
+                <th class="edit-col">Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let booking of bookings">
+                <td>{{ booking.id }}</td>
+                <td>{{ booking.confirmationNumber }}</td>
+                <td>{{ booking.flightId }}</td>
+                <td>{{ booking.passengerId }}</td>
+                
+                <td>
+                    <a href="#" [routerLink]="['/booking/', booking.id]" class="btn btn-primary">Details</a>
+                    <a href="#" [routerLink]="['/Bookings/edit/', booking.id]" class="btn btn-info">Edit</a>
+                    <button type="button" (click)="deleteBooking(booking.id)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
